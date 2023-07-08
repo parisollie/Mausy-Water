@@ -46,39 +46,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/Componente5"
-        android:text="Esto es un texto prueba"
-        app:layout_constraintTop_toBottomOf="@+id/Componente4"
-        android:layout_marginTop="20dp"
-        android:textColor="@android:color/white"
-        android:background="@android:color/holo_blue_light"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:id="@+id/Componente6"
-        android:text="Esto es un texto prueba"
-        app:layout_constraintTop_toBottomOf="@+id/Componente5"
-        android:layout_marginTop="20dp"
-        android:textColor="@android:color/white"
-        android:background="@android:color/holo_blue_light"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:id="@+id/Componente7"
-        android:text="Esto es un texto prueba"
-        app:layout_constraintTop_toBottomOf="@+id/Componente6"
-        android:layout_marginTop="20dp"
-        android:textColor="@android:color/white"
-        android:background="@android:color/holo_blue_light"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-
-
     <Button
         android:id="@+id/btBack"
-        app:layout_constraintTop_toBottomOf="@+id/Componente7"
+        app:layout_constraintTop_toBottomOf="@+id/Componente4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

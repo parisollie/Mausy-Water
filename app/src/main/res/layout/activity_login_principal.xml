@@ -17,12 +17,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/backgrounda" />
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".tareas.tarea1.FormularioActivity"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="275dp">
+        tools:layout_editor_absoluteX="-197dp"
+        tools:layout_editor_absoluteY="0dp">
         <!--Con el guide line ya le dije como lo quiero
     Mi guía del principio(debemos poner el blueprint para poder verlo)
     app:layout_constraintGuide_begin="40dp"
@@ -46,7 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent=".80" />
+            app:layout_constraintGuide_percent=".60" />
         <!-- Mi guía del Inicio-->
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/glBeg"
@@ -60,7 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="32dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
@@ -95,8 +97,7 @@
                     android:background="@drawable/edittext_background"
                     android:hint="Email"
                     android:inputType="textEmailAddress"
-                    android:lines="1"
-                     />
+                    android:lines="1" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -126,8 +127,7 @@
                     android:hint="Password"
                     android:inputType="textPassword"
                     android:lines="1"
-                    android:maxLength="16"
-                     />
+                    android:maxLength="16" />
 
                 <Button
                     android:id="@+id/botonTar"
@@ -157,7 +157,8 @@
                     style="@android:style/Widget.Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
+                    android:layout_marginTop="28dp"
+
                     android:background="@drawable/login_btn_background"
                     android:text="Registrate"
                     android:textColor="#ffffff"
@@ -169,55 +170,54 @@
 
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Ó deseas entrar con"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/glEnd"
+            app:layout_constraintStart_toStartOf="@+id/glStart"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+
+            android:orientation="horizontal"
+
+            app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/twitter" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/google" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/facebook" />
+        </LinearLayout>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:text="Ó deseas entrar con"
-        android:textColor="#2F3363"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
-        android:layout_marginEnd="32dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/twitter" />
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/google" />
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/facebook" />
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
 
