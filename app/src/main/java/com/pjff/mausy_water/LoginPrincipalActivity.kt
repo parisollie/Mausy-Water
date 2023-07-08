@@ -23,6 +23,14 @@ class LoginPrincipalActivity : AppCompatActivity() {
 
         binding.botonTar.setOnClickListener { submitForm() }
 
+
+        val buttonreg = findViewById<Button>(R.id.RegistrateBtn)
+
+        buttonreg.setOnClickListener{
+            startActivity(Intent(this, RegistroFormularioActivity::class.java))
+        }
+
+
     }
 
     private fun passwordFocusListener() {
@@ -99,12 +107,6 @@ class LoginPrincipalActivity : AppCompatActivity() {
         sendMessage.putExtra("EXTRA_MESSAGE1", message2)
 
 
-        val buttonreg = findViewById<Button>(R.id.RegistrateBtn)
-
-        buttonreg.setOnClickListener{
-            startActivity(Intent(this, RegistroFormularioActivity::class.java))
-
-        }
 
         startActivity(sendMessage)
     }

@@ -1,7 +1,9 @@
 package com.pjff.mausy_water
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 
 class PaintActivity : AppCompatActivity() {
@@ -35,6 +37,12 @@ class PaintActivity : AppCompatActivity() {
         textview5.text = receivedMessage5.toString()
         textview6.text = receivedMessage6.toString()
         textview7.text = receivedMessage7.toString()
+
+        val buttonreg = findViewById<Button>(R.id.btBack)
+
+        buttonreg.setOnClickListener{
+            startActivity(Intent(this, LoginPrincipalActivity::class.java))
+        }
 
     }
 

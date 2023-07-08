@@ -99,7 +99,6 @@
                 android:id="@+id/correoTar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textColor="#DFD2D2"
                 android:background="@drawable/edittext_background"
                 android:hint="Email"
                 android:inputType="textEmailAddress"
@@ -131,7 +130,6 @@
                 android:layout_height="match_parent"
                 android:lines="1"
                 android:maxLength="16"
-                android:textColor="#DFD2D2"
                 android:background="@drawable/edittext_background"
                 android:inputType="textPassword"
                 android:hint="Password"/>
@@ -156,7 +154,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="Nombre"
-                android:textColor="#DFD2D2"
                 android:background="@drawable/edittext_background"
                 android:inputType="text"
                 android:lines="1" />

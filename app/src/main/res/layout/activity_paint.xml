@@ -78,11 +78,11 @@
 
     <Button
         android:id="@+id/btBack"
-        app:layout_constraintTop_toBottomOf="@+id/Componente1"
+        app:layout_constraintTop_toBottomOf="@+id/Componente7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="Regresar Info"
+        android:text="Regresar Inicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

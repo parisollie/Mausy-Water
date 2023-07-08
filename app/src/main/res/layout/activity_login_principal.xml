@@ -96,7 +96,7 @@
                     android:hint="Email"
                     android:inputType="textEmailAddress"
                     android:lines="1"
-                    android:textColor="#DFD2D2" />
+                     />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -127,7 +127,7 @@
                     android:inputType="textPassword"
                     android:lines="1"
                     android:maxLength="16"
-                    android:textColor="#DFD2D2" />
+                     />
 
                 <Button
                     android:id="@+id/botonTar"
@@ -146,7 +146,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
-                    android:text="Ya tienes una cuenta ?"
+                    android:text="No tienes una cuenta ?"
 
                     android:textAlignment="center"
                     android:textColor="#ffffff"
@@ -176,7 +176,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="30dp"
         android:text="Ó deseas entrar con"
         android:textColor="#2F3363"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
@@ -184,22 +184,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="No tienes una cuenta?Registrate"
-        android:textColor="#2F3363"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="22dp"
         android:layout_marginEnd="32dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
