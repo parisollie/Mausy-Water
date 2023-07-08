@@ -7,6 +7,7 @@ import android.util.Patterns
 import androidx.appcompat.app.AlertDialog
 import com.pjff.mausy_water.databinding.ActivityRecibirDatosFormularioTareaBinding
 
+
 class RegistroFormularioActivity : AppCompatActivity() {
 
 

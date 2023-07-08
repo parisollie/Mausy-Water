@@ -1,4 +1,4 @@
-package com.pjff.mausy_water
+package com.pjff.mausy_water.TareaFragmento
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,32 +6,62 @@ import android.os.Bundle
 import android.util.Patterns
 import android.widget.Button
 import androidx.appcompat.app.AlertDialog
-import com.pjff.mausy_water.PasoDeActividades.Actividad2Activity
-import com.pjff.mausy_water.databinding.ActivityLoginPrincipalBinding
+import androidx.fragment.app.Fragment
+import com.pjff.mausy_water.Fragmentos.Fragment1
+import com.pjff.mausy_water.Fragmentos.Fragment2
+import com.pjff.mausy_water.PaintActivity
+import com.pjff.mausy_water.R
+import com.pjff.mausy_water.RegistroFormularioActivity
+import com.pjff.mausy_water.databinding.ActivityTareaFragmentoBinding
 
-class LoginPrincipalActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityLoginPrincipalBinding
-
+class TareaFragmentoActivity : AppCompatActivity() {
+    lateinit var binding: ActivityTareaFragmentoBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityLoginPrincipalBinding.inflate(layoutInflater)
 
+        binding = ActivityTareaFragmentoBinding.inflate(layoutInflater)
+
+        setContentView(R.layout.activity_tarea_fragmento)
         setContentView(binding.root)
+
         emailFocusListener()
         passwordFocusListener()
-        binding.botonTar.setOnClickListener { submitForm() }
+        binding.fragment1Bt.setOnClickListener { submitForm() }
 
-        //En caso de que toque el boton de registro
-        val buttonreg = findViewById<Button>(R.id.RegistrateBtn)
 
-        buttonreg.setOnClickListener{
-            startActivity(Intent(this, RegistroFormularioActivity::class.java))
+        //Por si hace click en un boton u otro
+        binding.fragment1Bt.setOnClickListener {
+            replaceFragment(Fragment1p())
+            var message = "Email: " + binding.correoTar.text
+            var message2 = "\nPassword: " + binding.contraseniaTar.text
+
+
+            //Mandamos a pintar nuestra Actividad
+            val sendMessage = Intent(this, PaintActivity::class.java)
+            //Le mandamos el mensaje
+            sendMessage.putExtra("EXTRA_MESSAGE", message)
+            sendMessage.putExtra("EXTRA_MESSAGE1", message2)
+            startActivity(sendMessage)
+
+
         }
+        binding.fragment2Bt.setOnClickListener {
+            replaceFragment(Fragment2p())
 
+            //En caso de que toque el boton de registro
 
+            startActivity(Intent(this, RegistroFormularioActivity::class.java))
+
+        }
     }
 
+    private fun replaceFragment(fragment: Fragment) {
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.fragmentContainer, fragment)
+        fragmentTransaction.commit()
+    }
 
 
     private fun passwordFocusListener() {
@@ -73,7 +103,8 @@ class LoginPrincipalActivity : AppCompatActivity() {
 
 
         if (validEmail && validPassword)
-            resetForm()
+
+            Fragment1p()
         else
             invalidForm()
     }
@@ -95,7 +126,8 @@ class LoginPrincipalActivity : AppCompatActivity() {
             .show()
     }
 
-    private fun resetForm() {
+    /*private fun resetForm() {
+
 
         var message = "Email: " + binding.correoTar.text
         var message2 = "\nPassword: " + binding.contraseniaTar.text
@@ -110,7 +142,7 @@ class LoginPrincipalActivity : AppCompatActivity() {
 
 
         startActivity(sendMessage)
-    }
+    }*/
 
 
     private fun emailFocusListener() {
@@ -130,4 +162,6 @@ class LoginPrincipalActivity : AppCompatActivity() {
         return null
     }
 }
+
+
 

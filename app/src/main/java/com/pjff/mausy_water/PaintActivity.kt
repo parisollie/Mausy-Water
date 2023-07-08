@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import com.pjff.mausy_water.TareaFragmento.TareaFragmentoActivity
 
 class PaintActivity : AppCompatActivity() {
     //Pintamos nuestros valores
@@ -34,7 +35,7 @@ class PaintActivity : AppCompatActivity() {
         val buttonreg = findViewById<Button>(R.id.btBack)
 
         buttonreg.setOnClickListener{
-            startActivity(Intent(this, LoginPrincipalActivity::class.java))
+            startActivity(Intent(this, TareaFragmentoActivity::class.java))
         }
 
     }

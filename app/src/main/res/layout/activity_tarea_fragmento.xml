@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginPrincipalActivity">
+    tools:context=".TareaFragmento.TareaFragmentoActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="600dp" />
 
 
     <ImageView
@@ -130,7 +135,7 @@
                     android:maxLength="16" />
 
                 <Button
-                    android:id="@+id/botonTar"
+                    android:id="@+id/fragment1Bt"
                     style="@android:style/Widget.Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -147,13 +152,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="No tienes una cuenta ?"
-
                     android:textAlignment="center"
                     android:textColor="#ffffff"
                     android:textSize="16sp" />
 
                 <Button
-                    android:id="@+id/RegistrateBtn"
+                    android:id="@+id/fragment2Bt"
                     style="@android:style/Widget.Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -219,5 +223,6 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
 
+
+</RelativeLayout>
