@@ -7,7 +7,7 @@ import android.widget.Button
 
 class LoginActivity : AppCompatActivity() {
 
-
+    //se inicia con pjff18@gmail.com ,123456
     private val passEdt= findViewById<EditText>(R.id.editTextTextPassword)
     private val  loginbtn = findViewById<Button>(R.id.loginBtn)
 
